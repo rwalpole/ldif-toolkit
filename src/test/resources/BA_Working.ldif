@@ -1,0 +1,55 @@
+# extended LDIF
+#
+# LDAPv3
+# base <ou=employees,ou=identities,ou=baplc,dc=ba,dc=com> with scope subtree
+# filter: (|(uid=n465025)(uid=n485356))
+# requesting: dn objectClass cn givenName mail sn uid 
+#
+
+dn: ou=baplc,dc=ba,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: baplc
+
+dn: ou=identities,ou=baplc,dc=ba,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: identities
+
+dn: ou=employees,ou=identities,ou=baplc,dc=ba,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: employees
+
+# N465025, employees, identities, baplc, ba.com
+dn: employeeNumber=N465025,ou=employees,ou=identities,ou=baplc,dc=ba,dc=com
+givenName: Rob
+uid: n465025
+sn: Walpole
+cn: Rob Walpole
+mail: rob.walpole@flatironssolutions.com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+
+
+# N485356, employees, identities, baplc, ba.com
+dn: employeeNumber=N485356,ou=employees,ou=identities,ou=baplc,dc=ba,dc=com
+givenName: Daniel
+uid: n485356
+sn: RajaS
+cn: Daniel RajaS
+mail: Daniel.RajaS@Flatironssolutions.com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 3
+# numEntries: 2
