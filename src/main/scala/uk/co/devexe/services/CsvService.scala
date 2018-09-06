@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 case class User(id:String,group:String)
 
-class CsvServices {
+class CsvService {
 
   def getEntries(fileName: String): Map[String,List[String]] = {
     val bufferedSource = io.Source.fromFile(fileName)

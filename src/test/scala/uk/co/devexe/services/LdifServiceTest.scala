@@ -1,7 +1,6 @@
 package uk.co.devexe.services
 
-import org.junit.Assert._
-import org.junit._
+import org.junit.jupiter.api.{Assertions, Test}
 
 class LdifServiceTest {
 
@@ -9,7 +8,7 @@ class LdifServiceTest {
     def testRead(): Unit = {
         val transformer = new LdifService
         val result = transformer.getEntries("src/test/resources/BA_Working.ldif")
-        assertEquals(5, result.size())
+        Assertions.assertEquals(5, result.size())
     }
 
 }
